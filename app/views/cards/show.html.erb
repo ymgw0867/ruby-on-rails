@@ -1,0 +1,18 @@
+<h1>Cards#show</h1>
+<p>※<%= @cards.title%>の読書データ</p>
+<table>
+    <tr>
+        <th width="100px">Id</th><td><%= @cards.id %></td></tr>
+    <tr>
+        <th>タイトル</th><td><%= @cards.title %></td></tr>
+    <tr>
+        <th>著者</th><td><%= @cards.author %></td></tr>
+    <tr>
+        <th>価格</th><td><%= @cards.price %></td></tr>
+    <tr>
+        <th>出版社</th><td><%= @cards.publisher %></td></tr>
+    <tr>
+        <th>コメント</th><td><%= @cards.memo %></td></tr>
+</table>
+
+<p class="link"><a href="/cards">&lt;&lt; ※トップページに戻る</a></p>
