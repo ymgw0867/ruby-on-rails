@@ -37,7 +37,4 @@ class CardsController < ApplicationController
   private 
   def goback
     redirect_to '/cards'
-  end
-  
-
 end
