@@ -2,13 +2,13 @@
 <p>現在、登録されているデータの一覧です</p>
 <table width = "100%">
     <tr>
-        <th>ID</th><th>題名</th><th>著者</th><th>colspan='2'</th>
+        <th>ID</th><th>題名</th><th>著者</th><th colspan='2'></th>
     </tr>
     
-   <% @data.each do |obj| %>
+   <% @cards.each do |obj| %>
        <tr>
         <td width="35px"><%= obj.id %></td>
-        <td width='50%'><a href="/cards/<%= obj.id %>"><%= obj.titile %></a></td>
+        <td width="50%"><a href="/cards/<%= obj.id %>"><%= obj.title %></a></td>
         <td><%= obj.author %></td>
         <td width='40px'><a href="/cards/edit/<%= obj.id %>">編集</a></td>
         <td width='40px'><a href="javascript:delData(<%= obj.id %>);">削除</a></td>

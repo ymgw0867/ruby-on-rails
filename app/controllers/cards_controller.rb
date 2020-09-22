@@ -13,13 +13,15 @@ class CardsController < ApplicationController
     if request.post? then
       Card.create(card_params)
       goback
+    else
+      @cards = Card.new 
     end
   end
-
+  
   def edit
     @cards = Card.find(params[:id])
     if request.patch? then
-      @card.update(card_params)
+      @cards.update(card_params)
       goback
     end
   end
@@ -37,4 +39,5 @@ class CardsController < ApplicationController
   private 
   def goback
     redirect_to '/cards'
+  end
 end
